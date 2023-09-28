@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,7 +29,21 @@ public class MoviesList
     {
         Random rnd = new Random();
         int index = rnd.Next(movies.Count);
-        return movies[index].Title;
+
+        var title = "Title: " + movies[index].Title + ", ";
+        var date = "Date: " + movies[index].Date + ", ";
+        var genre = "Genre: " + movies[index].Genre + ", ";
+        var director = "Director: " + movies[index].Director.FirstName + " " + movies[index].Director.LastName + ", ";
+
+        List<string> actors = new();
+      
+        foreach (var actor in movies[index].actors)
+        {
+            actors.Add(actor.FirstName + ' ' + actor.LastName);
+        }
+        var actorsList = "Actors: " + String.Join(", ", actors);
+
+        return title + director + date + genre + actorsList;
     }
 
     public string GetMoviesByName(string name)

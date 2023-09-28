@@ -1,48 +1,94 @@
 {
-  "movies":[
+  "movies": [
     {
-      "title":"The Shawshank Redemption",
-      "director":{
-        "firstName":"Frank",
-        "lastName":"Darabont"
+      "title": "The Shawshank Redemption",
+      "director": {
+        "firstName": "Frank",
+        "lastName": "Darabont"
       },
-      "genre":"DRAMA",
-      "date":"1994",
-      "actors":[
+      "genre": "DRAMA",
+      "date": "1994",
+      "actors": [
         {
-          "firstName":"Tim",
-          "lastName":"Robbins"
+          "firstName": "Tim",
+          "lastName": "Robbins"
         },
         {
-          "firstName":"Morgan",
-          "lastName":"Freeman"
+          "firstName": "Morgan",
+          "lastName": "Freeman"
         },
         {
-          "firstName":"Bob",
-          "lastName":"Gunton"
+          "firstName": "Bob",
+          "lastName": "Gunton"
         }
       ]
     },
     {
-      "title":"Seven",
-      "director":{
-        "firstName":"David",
-        "lastName":"Fincher"
+      "title": "Seven",
+      "director": {
+        "firstName": "David",
+        "lastName": "Fincher"
       },
-      "genre":"THRILLER",
-      "date":"1995",
-      "actors":[
+      "genre": "THRILLER",
+      "date": "1995",
+      "actors": [
         {
-          "firstName":"Morgan",
-          "lastName":"Freeman"
+          "firstName": "Morgan",
+          "lastName": "Freeman"
         },
         {
-          "firstName":"Brad",
-          "lastName":"Pitt"
+          "firstName": "Brad",
+          "lastName": "Pitt"
         },
         {
-          "firstName":"Gwyneth",
-          "lastName":"Paltrow"
+          "firstName": "Gwyneth",
+          "lastName": "Paltrow"
+        }
+      ]
+    },
+    {
+      "title": "G.I. Jane",
+      "director": {
+        "firstName": "Ridley",
+        "lastName": "Scott"
+      },
+      "genre": "DRAMA",
+      "date": "1997",
+      "actors": [
+        {
+          "firstName": "Demi",
+          "lastName": "Moore"
+        },
+        {
+          "firstName": "Viggo",
+          "lastName": "Mortensen"
+        },
+        {
+          "firstName": "Anne",
+          "lastName": "Bancroft"
+        }
+      ]
+    },
+    {
+      "title": "Green Book",
+      "director": {
+        "firstName": "Peter",
+        "lastName": "Farrelly"
+      },
+      "genre": "COMEDY-DRAMA",
+      "date": "2018",
+      "actors": [
+        {
+          "firstName": "Mahershala",
+          "lastName": "Ali"
+        },
+        {
+          "firstName": "Viggo",
+          "lastName": "Mortensen"
+        },
+        {
+          "firstName": "Linda",
+          "lastName": "Cardellini"
         }
       ]
     }

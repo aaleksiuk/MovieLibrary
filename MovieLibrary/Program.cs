@@ -33,7 +33,7 @@ do
             Console.WriteLine(movies.GetRandomMovie());
             break;
         case "3":
-            Console.WriteLine("actor's name to display all movies he acts");
+            Console.WriteLine("Enter actor's name to display all movies he acts");
             actorName = Console.ReadLine();
             Console.WriteLine(movies.GetMoviesByName(actorName));
             break;
