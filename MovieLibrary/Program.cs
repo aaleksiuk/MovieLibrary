@@ -33,9 +33,8 @@ do
             Console.WriteLine(movies.GetRandomMovie());
             break;
         case "3":
-            Console.WriteLine("Enter actor's name to display all movies he acts");
-            actorName = Console.ReadLine();
-            Console.WriteLine(movies.GetMoviesByName(actorName));
+            Console.WriteLine("Enter actor to display all movies he acts");
+            Console.WriteLine(movies.GetMoviesByActorName(new Actor() { FirstName = Console.ReadLine(), LastName = Console.ReadLine() })); ;
             break;
         default:
             break;

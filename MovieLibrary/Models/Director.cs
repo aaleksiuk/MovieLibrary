@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieLibrary;
+namespace MovieLibrary.Models;
 
-public class Director
+public class Director : Person
 {
-    public string FirstName;
-    public string LastName;
 }

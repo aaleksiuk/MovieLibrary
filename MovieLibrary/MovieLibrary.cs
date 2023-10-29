@@ -4,62 +4,47 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using MovieLibrary.Models;
 
 namespace MovieLibrary;
 public class MoviesList
 {
-    public List<Movie> movies;
+    public List<Movie> Movies;
 
     public string GetMoviesByDate(int fromDate, int toDate)
     {
         List<string> moviesByDate = new();
 
-        foreach (var movie in movies)
+        foreach (var movie in Movies)
         {
-            if ((movie.Date >= fromDate) && (movie.Date <= toDate))
+            if (movie.Date >= fromDate && movie.Date <= toDate)
             {
                 moviesByDate.Add(movie.Title);
             }
         }
-        var result_moviesByDate = String.Join(", ", moviesByDate);
-        return result_moviesByDate;
+        return string.Join(", ", moviesByDate);
+
     }
 
     public string GetRandomMovie()
     {
-        Random rnd = new Random();
-        int index = rnd.Next(movies.Count);
-
-        var title = "Title: " + movies[index].Title + ", ";
-        var date = "Date: " + movies[index].Date + ", ";
-        var genre = "Genre: " + movies[index].Genre + ", ";
-        var director = "Director: " + movies[index].Director.FirstName + " " + movies[index].Director.LastName + ", ";
-
-        List<string> actors = new();
-      
-        foreach (var actor in movies[index].actors)
-        {
-            actors.Add(actor.FirstName + ' ' + actor.LastName);
-        }
-        var actorsList = "Actors: " + String.Join(", ", actors);
-
-        return title + director + date + genre + actorsList;
+        return Movies[new Random().Next(Movies.Count)].ToString();
     }
 
-    public string GetMoviesByName(string name)
+    public string GetMoviesByActorName(Actor expectedActor)
     {
         List<string> moviesByName = new();
-        foreach (var movie in movies)
+        foreach (var movie in Movies)
         {
-            foreach (var actor in movie.actors)
+            foreach (var actor in movie.Actors)
             {
-                if (actor.LastName == name)
+                if (actor.Equals(expectedActor))
                 {
                     moviesByName.Add(movie.Title);
+                    break;
                 }
             }   
         }
-        var result_moviesByName = String.Join(", ", moviesByName);
-        return result_moviesByName;
+        return string.Join(", ", moviesByName);
     }
 }
